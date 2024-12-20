@@ -14,6 +14,7 @@
 		BB470D1C2D150895002BB6A5 /* TodoTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB470D1B2D150895002BB6A5 /* TodoTestTests.swift */; };
 		BB470D262D150895002BB6A5 /* TodoTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB470D252D150895002BB6A5 /* TodoTestUITests.swift */; };
 		BB470D282D150895002BB6A5 /* TodoTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB470D272D150895002BB6A5 /* TodoTestUITestsLaunchTests.swift */; };
+		BB470D372D15174F002BB6A5 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB470D362D15174F002BB6A5 /* TaskManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		BB470D212D150895002BB6A5 /* TodoTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB470D252D150895002BB6A5 /* TodoTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTestUITests.swift; sourceTree = "<group>"; };
 		BB470D272D150895002BB6A5 /* TodoTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB470D362D15174F002BB6A5 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				BB470D0A2D150894002BB6A5 /* TodoTestApp.swift */,
+				BB470D362D15174F002BB6A5 /* TaskManager.swift */,
 				BB470D0C2D150894002BB6A5 /* ContentView.swift */,
 				BB470D0E2D150895002BB6A5 /* Assets.xcassets */,
 				BB470D102D150895002BB6A5 /* Preview Content */,
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB470D372D15174F002BB6A5 /* TaskManager.swift in Sources */,
 				BB470D0D2D150894002BB6A5 /* ContentView.swift in Sources */,
 				BB470D0B2D150894002BB6A5 /* TodoTestApp.swift in Sources */,
 			);
