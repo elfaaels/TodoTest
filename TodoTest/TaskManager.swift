@@ -9,14 +9,17 @@ import Foundation
 
 class TaskManager: ObservableObject {
     @Published var tasks: [String] = []
-    var newTask: String = ""
-
+    @Published var newTask: String = ""
+    
     func addTask() {
         guard !newTask.isEmpty else { return }
         tasks.append(newTask)
+        print("Added Task: \(newTask)")
+        print("Current Tasks: \(tasks)")
+        
         newTask = ""
     }
-
+    
     func deleteTask(_ task: String) {
         tasks.removeAll { $0 == task }
     }

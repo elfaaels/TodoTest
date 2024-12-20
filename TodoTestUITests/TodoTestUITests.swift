@@ -17,8 +17,6 @@ final class TodoTestUITests: XCTestCase {
         app.launch()
     }
 
-    override func tearDownWithError() throws {
-    }
 
     func testExample() throws {
         let app = XCUIApplication()
@@ -38,17 +36,12 @@ final class TodoTestUITests: XCTestCase {
         let newTaskTextField = app.textFields["newTaskTextField"]
         let addTaskButton = app.buttons["addTaskButton"]
         let taskList = app.tables["taskList"]
-        
+
         newTaskTextField.tap()
         newTaskTextField.typeText("Buy Coffee")
         addTaskButton.tap()
-        
-        let newTask = taskList.cells.staticTexts["task_Buy Coffee"]
-        print(app.debugDescription)
-        print("Task: \(newTask.exists)")
 
-//        XCTAssertTrue(newTask.waitForExistence(timeout: 5), "The task was not added to the list.")
+        let newTask = taskList.cells.staticTexts["task_Buy Coffee"]
     }
- 
 
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var taskManager = TaskManager()
-
+    
     var body: some View {
         VStack {
             HStack {
@@ -21,25 +21,27 @@ struct ContentView: View {
                 }
                 .accessibilityIdentifier("addTaskButton")
             }
-        }
-        .padding()
-        List {
-            ForEach(taskManager.tasks, id: \.self) { task in
-                HStack {
-                    Text(task.trimmingCharacters(in: .whitespacesAndNewlines))
-                        .accessibilityIdentifier("task_\(task.trimmingCharacters(in: .whitespacesAndNewlines))")
-                    Spacer()
-                    Button("Delete") {
-                        taskManager.deleteTask(task)
+            .padding()
+            
+            List {
+                ForEach(taskManager.tasks, id: \.self) { task in
+                    HStack {
+                        Text(task.trimmingCharacters(in: .whitespacesAndNewlines))
+                            .accessibilityIdentifier("task_\(task.trimmingCharacters(in: .whitespacesAndNewlines))")
+                        Spacer()
+                        Button("Delete") {
+                            taskManager.deleteTask(task)
+                        }
+                        .accessibilityIdentifier("deleteTaskButton_\(task)")
                     }
-                    .accessibilityIdentifier("deleteTaskButton_\(task)")
                 }
             }
+            .accessibilityIdentifier("taskList")
         }
-        .accessibilityIdentifier("taskList")
         .padding()
     }
 }
+
 
 #Preview {
     ContentView()
